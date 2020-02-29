@@ -11,13 +11,13 @@ int main() {
     for (int i = 3; i <= n/2 + 1; i += 2) {
         int flag = 0;
         int k = n - i;
-        for (int j = 3; j <= i / 2 ; j += 2) {
+        for (int j = 3; j <= sqrt(i) ; j += 2) {
             if (i % j == 0) {
                 flag = -1;
                 break;
             }
         }
-        for (int j = 3; j <= k / 2 && flag == 0; j += 2) {
+        for (int j = 3; j <= sqrt(k) && flag == 0; j += 2) {
             if (k % j == 0) {
                 flag = -1;
                 break;
